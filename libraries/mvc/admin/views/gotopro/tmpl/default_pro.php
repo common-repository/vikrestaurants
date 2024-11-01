@@ -1,0 +1,76 @@
+<?php
+/** 
+ * @package     VikRestaurants
+ * @subpackage  core
+ * @author      E4J s.r.l.
+ * @copyright   Copyright (C) 2023 E4J s.r.l. All Rights Reserved.
+ * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @link        https://vikwp.com
+ */
+
+// No direct access to this file
+defined('ABSPATH') or die('No script kiddies please!');
+
+RestaurantsHelper::printMenu();
+
+$valid_until = JHtml::fetch('date', $this->licenseDate, VREFactory::getConfig()->get('dateformat'));
+
+?>
+<div class="viwppro-cnt viwpro-procnt">
+	<div class="viwpro-procnt-inner">
+
+		<div class="vikwppro-header">
+			<div class="vikwppro-header-inner">
+				<div class="vikwppro-header-text">
+					<h2>
+						<?php _e('Thanks for using the Pro version', 'vikrestaurants'); ?>
+					</h2>
+					<h3>
+						<?php _e('The true VikRestaurants is Pro. Make sure to keep your license key active to be able to install future updates.', 'vikrestaurants'); ?>
+					</h3>
+				</div>
+			</div>
+		</div>
+		
+		<div class="vikwppro-licensecnt">
+			<div class="col col-md-6 col-sm-12 vikwppro-licensetext">
+				<div>
+					<h3>
+						<?php
+						echo sprintf(
+							__('License key valid until <span class="word-keep-all">%s</span>', 'vikrestaurants'),
+							$valid_until
+						);
+						?>
+					</h3>
+					<h4>
+						<?php _e('Get or renew your License Key from VikWP.com', 'vikrestaurants'); ?>
+					</h4>
+					<a href="https://vikwp.com/" class="vikwp-btn-link" target="_blank"><i class="fas fa-rocket"></i> <?php _e('Get or renew your license', 'vikrestaurants'); ?></a>
+				</div>
+				<span class="icon-background"><i class="fas fa-rocket"></i></span>
+			</div>
+			
+			<div class="col col-md-6 col-sm-12 vikwppro-licenseform">
+				<form>				
+					<div class="vikwppro-licenseform-inner">
+						<h4><?php _e('Already have your key? Enter it here', 'vikrestaurants'); ?></h4>
+						<div>
+							<span class="vikwppro-inputspan"><i class="fas fa-key"></i>
+								<input type="text" name="key" id="lickey" value="<?php echo $this->escape($this->licenseKey); ?>" class="license-input" autocomplete="off" />
+							</span>
+							<button type="button" class="btn btn-primary" id="vikwpvalidate" onclick="vikWpValidateLicenseKey();">
+								<?php _e('Validate and Update', 'vikrestaurants'); ?>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<?php
+// load common scripts
+echo $this->loadTemplate('js');

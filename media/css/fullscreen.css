@@ -1,0 +1,31 @@
+/* hide admin side-bar and backdrop */
+#adminmenuback, #adminmenuwrap {
+	display: none !important;
+}
+
+/* unset margins and paddings from plugin container */
+#wpcontent {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* remove padding from body content */
+#wpbody-content {
+	padding: 0 !important;
+}
+
+/* unset body wrap margins and paddings */
+.wrap {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* hide component toolbar */
+.jtoolbar {
+	display: none !important;
+}
+
+/* hide footer */
+#wpfooter {
+	display: none !important;
+}

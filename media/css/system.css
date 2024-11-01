@@ -1,0 +1,1249 @@
+/* elements */
+
+a {
+	text-decoration: none;
+}
+a:focus {
+	box-shadow: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+/* required */
+
+label.invalid,
+b.invalid,
+a.invalid {
+	color: #9d261d;
+}
+input.invalid {
+	border: 1px solid #9d261d;
+	background: #f2dede;
+}
+input[type="text"]:focus {
+	box-shadow: none;
+}
+
+/* unset useless margin due to a hidden php error */
+.php-error #adminmenuback,
+.php-error #adminmenuwrap {
+	margin: 0 !important;
+}
+
+/* system toolbar */
+
+.jtoolbar {
+	margin-bottom: 10px;
+}
+
+/* system messages */
+
+.notice.no-decoration {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	box-shadow: none;
+}
+
+.notice.activate-success {
+	background: #dff0d8;
+	border: 2px solid #56b360;
+	color: #3c763d;
+	box-shadow: none;
+}
+
+#adminForm table[align="center"] {
+	display: block;
+	float: right;
+}
+
+.tablenav input[type="search"] {
+	float: left;
+	height: 28px;
+	margin: 0 4px 0 0;
+}
+
+h2 i.vr-quest-popover {
+	transform: none;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+table.wp-list-table i.vr-quest-popover {
+	/* ignore margin when popover is inside a list table */
+	margin-left: 0;
+	transform: none !important;
+	color: #555;
+}
+table.wp-list-table th i {
+	margin-left: 2px;
+}
+table.wp-list-table th.left,
+table.wp-list-table td.left {
+	text-align: left;
+}
+table.wp-list-table th.center,
+table.wp-list-table td.center {
+	text-align: center;
+}
+table.wp-list-table th.right,
+table.wp-list-table td.right {
+	text-align: right;
+}
+
+/* native table */
+
+table.table,
+table.order-status-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table.table th,
+table.table td {
+	text-align: left;
+	padding: 8px;
+}
+table.table td {
+	border-top: solid 1px #ddd;
+}
+
+.sortable-handler.inactive {
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.acl-rule-allowed,
+.acl-rule-denied {
+	color: #fff;
+	border-radius: 3px;
+	padding: 2px 6px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 32px;
+}
+
+.acl-rule-allowed {
+	background: #3c763d;
+}
+
+.acl-rule-denied {
+	background: #a94442;
+}
+
+/* postbox */
+
+.postbox-container {
+	width: 100%;
+}
+.postbox-container h2 {
+	font-size: 14px;
+	padding: 8px 12px;
+	margin: 0;
+	line-height: 1.4;
+}
+.postbox-container div.control,
+.postbox-container div.control-group {
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 1em 0;
+}
+.postbox-container div.control,
+.postbox-container div.control-group {
+	margin-bottom: 1em;
+}
+.postbox-container div.control label + .control-value,
+.postbox-container div.control-group label + .control-value,
+.postbox-container div.control-group .control-label + .controls {
+	display: inline-block;
+	width: calc(100% - 160px);
+}
+.postbox-container p > label,
+.postbox-container div.control > label,
+.postbox-container div.control-group > label,
+.postbox-container p > .control-label,
+.postbox-container div.control-group > .control-label {
+	/*width: 120px;*/
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 26px;
+}
+.postbox-container input {
+	border-radius: 2px;
+	padding: 4px 6px;
+	max-width: 100%;
+}
+div.control-group .controls small.form-text {
+	font-size: 0.9em;
+}
+
+.controls textarea {
+	width: 90%;
+}
+.config-fieldset-body textarea {
+	width: 100%;
+}
+
+@media screen and (max-width: 782px) {
+	.postbox-container p > label,
+	.postbox-container div.control > label,
+	.postbox-container div.control-group > label,
+	.postbox-container div.control .control-value,
+	.postbox-container p > .control-label,
+	.postbox-container div.control-group > .control-label,
+	.postbox-container div.control-group .controls {
+		display: block;
+		width: 100%;
+	}
+}
+
+/* Fixed colorpicker layout conflict with wp */
+.colorpicker {
+	z-index: 9999999 !important;
+}
+.colorpicker input {
+	min-height: auto;
+	line-height: 18px;
+	height: 18px;
+}
+
+/* fix layout for h2 within .inside selector */
+.postbox-container .inside .postbox-container h2.hndle {
+	font-size: 14px;
+	padding: 8px 12px;
+	margin: 0;
+	line-height: 1.4;
+}
+
+/* fix layout for span[n] within .inside selector */
+.postbox-container .inside div[class*="span"] {
+	width: 100%;
+	margin: 0;
+}
+
+/* in case of right container, we need to turn off the style of the parent wrapper */
+#right-container > .postbox-container {
+	padding: 0;
+	margin: 0;
+}
+#right-container > .postbox-container > .postbox {
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+}
+#right-container > .postbox-container > .postbox > .inside {
+	padding: 0;
+	margin: 0;
+}
+
+.profile-image-wrapper .control-label,
+.profile-image-wrapper .controls {
+	display: block !important;
+	width: 100% !important;
+}
+
+/* CodeMirror */
+
+.modal-body .CodeMirror {
+	height: 65vh;
+}
+
+.CodeMirror-wrap pre {
+	word-break: break-word !important;
+}
+
+/* TinyMCE */
+.mce-menubar[role="menubar"] {
+	/* always hide menu bar */
+	display: none;
+}
+
+/* Menu Tab */
+.nav-tabs li .badge.tab-badge-count {
+	display: none;
+}
+
+/* Media manager */
+
+.image-preview-wrapper img {
+	max-height: 100px;
+	max-width: 200px;
+	width: auto;
+}
+
+.vre-media-modal .notice {
+	margin: 10px !important;
+}
+
+/* Yes-No buttons */
+
+.switch-field {
+	font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
+	padding: 2px;
+	overflow: hidden;
+	display: inline-block;
+}
+.switch-title {
+	margin-bottom: 6px;
+}
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+.switch-field label {
+	float: left;
+}
+.switch-field label {
+	display: inline-block;
+	width: 60px;
+	background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	text-shadow: none;
+	padding: 6px 14px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+.switch-field label:hover {
+	cursor: pointer;
+}
+.switch-field input:checked + label {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #fff;
+}
+.switch-field input:checked + label.button-yes {
+	background-color: #2f6f2f;
+}
+.switch-field input:checked + label.button-no {
+	background-color: #802420;
+}
+.switch-field label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+.switch-field label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+/* select2 */
+
+.select2-drop-mask, .select2-drop {
+	/* must be higher than bootstrap modal (99999) and lower than tooltip (100001) */
+	z-index: 100000 !important;
+}
+
+/* fancybox */
+.fancybox-container {
+	/* must be equals or higher than the WordPress admin bar (99999) */
+	z-index: 99999 !important;
+}
+
+/* google places auto-complete */
+.pac-container {
+	/* must be higher than the WordPress admin bar (99999) */
+	z-index: 100000 !important;
+}
+
+/* btn toolbar */
+
+.btn-toolbar {
+	/* fixed height for toolbar */
+	height: 32px;
+	/* WP5 */
+	display: inline-block;
+	width: 100%;
+	margin: 5px 0;
+}
+.btn-group,
+.input-append,
+.input-prepend {
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.pull-right {
+	float: right;
+}
+.pull-left {
+	float: left;
+}
+.btn-group + .btn-group {
+	margin-left: 3px;
+}
+
+.btn-toolbar .btn-group.pull-left .select2-container {
+	margin-right: 5px;
+}
+.btn-toolbar .btn-group.pull-right .select2-container {
+	margin-left: 5px;
+}
+
+.btn-group .btn,
+.input-append .btn,
+.input-prepend .btn {
+	min-height: 28px;
+	min-width: 28px;
+	margin-top: 0;
+	vertical-align: top;
+}
+
+.btn-group .btn:not(:last-child),
+.input-append .btn:not(:last-child),
+.input-prepend .btn:not(:last-child) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-right-width: 0;
+	margin-right: -3px;
+}
+.btn-group .btn + .btn,
+.input-append .btn + .btn,
+.input-prepend .btn + .btn {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-left: -1px;
+}
+
+.btn-group input,
+.input-append input,
+.input-prepend input {
+	vertical-align: middle;
+}
+
+.input-append .wp-calendar-box input {
+	height: 28px;
+	padding: 0 6px;
+	margin: 0;
+	border-radius: 0;
+}
+
+.wp-admin div[class*="span"].full-width .input-append.vr-customf-choose {
+    width: calc(100% - 60px) !important;
+}
+
+.wp-admin .record-inspector .inspector-body .inspector-form input[type="checkbox"],
+.wp-admin .record-inspector .inspector-body .inspector-form .toppings-group input[type="checkbox"] {
+	width: 16px !important;
+	height: 16px !important;
+}
+
+/* button classes */
+
+.btn {
+	background-color: #f3f3f3;
+	color: #333;
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/*border: 1px solid #b3b3b3;*/
+	border: 1px solid #8c8f94;
+	padding: 4px 8px;
+	font-size: 13px;
+	line-height: 17px;
+	border-radius: .25rem;
+	transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+span.btn:hover {
+	cursor: default;
+	color: #333;
+	background-color: #f3f3f3;
+	/*border-color: #b3b3b3;*/
+	border: 1px solid #8c8f94;
+}
+.btn:focus, .btn:hover {
+	color: #343a40;
+	background-color: #f8f9fa;
+	border-color: #6c757d;
+	text-decoration: none;
+}
+.btn.active {
+	background-color: #858282;
+	border-color: #858282;
+	color: #fff;
+}
+.btn-small {
+    padding: 2px 10px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.btn-mini {
+	padding: 0 6px;
+	font-size: 9.75px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	min-height: auto;
+}
+.btn-group .btn-mini,
+.input-append .btn-mini,
+.input-prepend .btn-mini {
+	min-height: auto;
+}
+.btn-success {
+	color: #fff;
+	background-color: #438243;
+	border: 1px solid #117211;
+}
+.btn-success:hover {
+	color: #fff;
+	background-color: #366936;
+	border-color: #326032;
+}
+.btn-danger {
+	color: #fff;
+	background-color: #d9534f;
+	border: 1px solid #b93e3a;
+}
+.btn-danger:hover {
+	color: #fff;
+	background-color: #d23430;
+	border-color: #c9302c;
+}
+.btn-primary {
+	color: #fff;
+	background-color: #006898;
+	border: 1px solid #03577e;
+}
+.btn-primary:hover {
+	color: #fff;
+	background-color: #004e72;
+	border: 1px solid #004565;
+}
+.btn-warning {
+	color: #fff;
+	background-color: #f89406;
+	border: 1px solid #c27408;
+}
+.btn-warning:hover {
+	color: #fff;
+	background-color: #ad6704;
+	border: 1px solid #f89406;
+}
+.btn-secondary {
+	color: #343a40;
+	background-color: #fefefe;
+	/*border-color: #b3b3b3;*/
+	border: 1px solid #8c8f94;
+}
+.btn-secondary:focus,.btn-secondary:hover {
+	color: #343a40;
+	background-color: #f8f9fa;
+	border-color: #6c757d;
+}
+a.btn {
+	text-decoration: none;
+}
+
+.btn img {
+	vertical-align: middle;
+}
+
+a.btn {
+	/* fix block layout on button links */
+	box-sizing: border-box;
+}
+
+a.disabled,
+.btn.disabled,
+.btn[disabled] {
+	cursor: default;
+	background-image: none;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+a.disabled,
+a.disabled:hover {
+	color: #999999;
+	background-color: transparent;
+	cursor: default;
+	text-decoration: none;
+}
+
+.price-quick-update .controls {
+	margin-left: 153px;
+}
+.price-quick-update .controls button#price-quick-update-btn {
+	width: auto !important;
+}
+
+#customizer-addcss-inspector .btn-group .btn {
+	min-width: 32px !important;
+}
+
+/* calendar field */
+
+.wp-calendar-box {
+	background: transparent;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+.wp-calendar-box input[type="text"] {
+	padding-right: 24px;
+}
+.wp-calendar-box i.dashicons-calendar-alt {
+	position: absolute;
+	top: 5px;
+	right: 4px;
+}
+
+/* responsive */
+
+.visible-phone {
+	display: none !important;
+}
+.visible-tablet {
+	display: none !important;
+}
+.hidden-desktop {
+	display: none !important;
+}
+.visible-desktop {
+	display: inherit !important;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	.hidden-desktop {
+		display: inherit !important;
+	}
+	.visible-desktop {
+		display: none !important;
+	}
+	.visible-tablet {
+		display: inherit !important;
+	}
+	.hidden-tablet {
+		display: none !important;
+	}
+}
+@media (max-width: 767px) {
+	.hidden-desktop {
+		display: inherit !important;
+	}
+	.visible-desktop {
+		display: none !important;
+	}
+	.visible-phone {
+		display: inherit !important;
+	}
+	.hidden-phone {
+		display: none !important;
+	}
+}
+
+@media (max-width: 500px) {
+	/* shorten search input */
+	.btn-group input {
+		max-width: 250px;
+	}
+}
+@media (max-width: 500px) {
+	/* decrease padding of cells to avoid exceeding the screen */
+	.widefat td, .widefat th {
+		padding: 8px 4px;
+	}
+}
+@media (max-width: 782px) {
+	/* move toolbar below the heading */
+	.jtoolbar .wp-heading-inline {
+		width: 100%;
+	}
+}
+
+/* native icons */
+
+i[class^="icon-"] {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+}
+i.icon-search:before {
+	content: "\f002";
+}
+i.icon-apply:before {
+	content: "\f00c";
+}
+i.icon-remove:before {
+	content: "\f00d";
+}
+i.icon-pencil:before {
+	content: "\f044";
+}
+i.icon-eye:before {
+	content: "\f06e";
+}
+i.icon-eye-close:before {
+	content: "\f070";
+}
+i.icon-location:before {
+	content: "\f041";
+}
+i.icon-calendar:before {
+	content: "\f073";
+}
+i.icon-loop:before {
+	content: "\f021";
+}
+i.icon-save-copy:before {
+	content: "\f0c5";
+}
+i.icon-new:before {
+	content: "\f055";
+}
+i.icon-file:before {
+	content: "\f15b";
+}
+
+/**
+ * native
+ */
+
+.ui-dialog {
+	z-index: 10001 !important;
+}
+.ui-widget-overlay {
+	z-index: 10000 !important;
+}
+.ui-dialog-content table.adminform span {
+	font-size: smaller;
+}
+
+table .fa.fa-qrcode.vr-quest-popover {
+	/* increase font size of QR icon within shortcodes list */
+	font-size: 18px;
+}
+
+.control label i,
+.control-group label i {
+	vertical-align: initial;
+	transform: none;
+	font-size: inherit;
+	margin-left: 5px;
+}
+
+.inspector-form .control label,
+.inspector-form .control-group label {
+	margin-bottom: 4px;
+	display: block;
+}
+.record-inspector .inspector-body .inspector-form .control-group .controls {
+	width: 100% !important;
+}
+.record-inspector .inspector-body .inspector-form input,
+.record-inspector .inspector-body .inspector-form select,
+.record-inspector .inspector-body .inspector-form textarea,
+.record-inspector .inspector-body .inspector-form .wp-calendar-box {
+	width: 100% !important;
+}
+.record-inspector .inspector-body .inspector-form .btn-group,
+.record-inspector .inspector-body .inspector-form .input-append,
+.record-inspector .inspector-body .inspector-form .input-prepend {
+	width: 100%;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.custmail-top-control {
+	margin-bottom: 10px;
+}
+
+/* force max width for payment images */
+.vikpayparamdiv img {
+	max-width: 100%;
+}
+
+.dashboard-widgets-container.dashboard {
+	background: #fcfcfc;
+}
+
+/* avoid covering the full screen with GM */
+#jmodal-box-mapareas {
+	padding: 0;
+}
+.modal-header + div#jmodal-box-mapareas {
+	height: calc(100% - 50px) !important;
+}
+#jmodal-box-mapareas #googlemap.gm-fixed,
+#jmodal-box-mapareas .vr-map-address-box {
+	position: absolute !important;
+}
+#jmodal-box-mapareas .vr-map-address-box-response {
+	margin-top: 4px;
+}
+
+/* unset padding from media manager modal */
+#jmodal-box-mediamanager {
+	padding: 0;
+}
+.modal-header + div#jmodal-box-mediamanager {
+	height: calc(100% - 112px) !important;
+}
+#jmodal-box-mediamanager .vre-media-gallery {
+	max-height: calc(90% - 158px);
+}
+
+/* adjust inspector */
+.record-inspector {
+	padding: 30px 0 0 0;
+}
+.record-inspector .inspector-footer {
+	bottom: 0;
+}
+.record-inspector .inspector-body .inspector-form .toppings-group input[type="checkbox"] {
+	width: 16px !important;
+}
+.inspector-form ul.nav-tabs {
+	margin: 10px 0 15px 0;
+}
+
+.record-inspector .inspector-body .inspector-form .vrtk-entry-var {
+	flex-wrap: wrap;
+}
+.record-inspector .inspector-body .inspector-form .vrtk-entry-var input.entry_option_name {
+	/*width: 100% !important;*/
+	width: 60% !important;
+	margin-right: 10px;
+}
+.record-inspector .inspector-body .inspector-form .vrtk-entry-var .currency-field {
+	/*width: 50% !important;*/
+	width: calc(30% - 10px);
+}
+.record-inspector .inspector-body .vre-media-manager-field.btn-group .btn:not(:last-child),
+.record-inspector .inspector-body .vre-media-manager-field.input-append .btn:not(:last-child),
+.record-inspector .inspector-body .vre-media-manager-field.input-prepend .btn:not(:last-child) {
+	margin-right: 1px;
+}
+
+/* make sure the width of the thumbnail doesn't exceed the bounds */
+.media-thumbnail img {
+	max-width: 100%;
+}
+
+/* unset toolbar padding on products modal */
+.vre-products-modal .btn-toolbar {
+	padding: 0;
+}
+
+/* remove background from configuration */
+.vretabview {
+	background: none;
+	padding: 0;
+}
+.vretabview .config-fieldset {
+	margin: 10px 0 20px 0;
+}
+.vretabview .config-left-side {
+	margin-right: 10px;
+}
+.vretabview .config-right-side {
+	margin-left: 10px;
+}
+
+.vre-config-searchbar {
+	height: 48px;
+}
+
+/* purchaser info modal */
+.order-container .order-left-box {
+	border-right-color: #ddd;
+}
+.order-container .order-left-box .order-left-top-box {
+	border-bottom-color: #ddd;
+}
+.order-container .order-left-box .order-left-bottom-box .order-custom-fields:not(:only-of-type) {
+	border-left-color: #ddd;
+}
+
+@media screen and (max-width: 767px) {
+	.order-global-details {
+		border-bottom-color: #ddd;
+	}
+	.order-custom-fields {
+		border-bottom-color: #ddd !important;
+	}
+	.order-items-list {
+		border-bottom-color: #ddd !important;
+	}
+}
+
+/* tables map */
+.map-table-inspector .reservation-notes-wrapper .reservation-notes textarea,
+.map-table-inspector .vre-select-wrapper #res-operator-select {
+	width: 100% !important;
+}
+
+/* customer info modal */
+.order-status-table thead tr,
+.order-status-table td {
+	background: #fff;
+}
+.order-status-table .track-comment td {
+	background: #f8f8f8;
+	border-bottom: 0;
+}
+.order-status-table tfoot td {
+	background: #bacae0;
+}
+
+/* stocks overview */
+select.vr-stockfactor-sel {
+	vertical-align: inherit;
+}
+
+/* license */
+#vre-main-menu.vre-horizontal-menu .license-box {
+	float: right;
+	padding: 10px;
+	background-color: #4a9468;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+/* adjust canvas contents to WP height */
+#wpwrap .ui-border-layout .ui-content {
+	height: calc(100vh - 70px - 32px) !important;
+}
+
+/* decrease width of "percentot" select2 on tkdiscord view */ 
+.wrap.vikrestaurants-page-tkdiscord .select2-container[id$="percentot-sel"] {
+	width: 75px !important;
+}
+
+/* adjust width of boxes on managetkrescart and managebill views */
+.wrap.vikrestaurants-page-managetkrescart div.span8,
+.wrap.vikrestaurants-page-managebill div.span8 {
+	width: calc(60% - 10px);
+}
+.wrap.vikrestaurants-page-managetkrescart div.span4,
+.wrap.vikrestaurants-page-managebill div.span4 {
+	width: calc(40% - 10px);
+}
+
+/* fixed exceeding with of translation hint fields */
+.input-append.translation-hint {
+	max-width: calc(100% - 26px);
+}
+.translation-hint textarea {
+	box-sizing: content-box;
+}
+.translation-hint textarea + a {
+	bottom: 6px;
+}
+
+.vikrestaurants-page-manageapiplugin pre {
+	word-wrap: break-word;
+}
+
+/* wizard */
+.vre-wizard .wizard-step .wizard-step-body,
+.vre-wizard .wizard-step .wizard-step-footer-bar {
+	background: #f9f9f9 !important;
+}
+.vre-wizard div.control-group,
+.vre-wizard div.control {
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 1em 0;
+	margin-bottom: 1em;
+}
+.vre-wizard div.control-group .controls,
+.vre-wizard div.control .control-value {
+	display: flex;
+}
+.vre-wizard div.control-group > .control-label,
+.vre-wizard div.control > label {
+	width: 120px;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 26px;
+	float: left;
+}
+.vre-wizard .wizard-step .wizard-form input[type="text"],
+.vre-wizard .wizard-step .wizard-form input[type="email"],
+.vre-wizard .wizard-step .wizard-form input[type="tel"],
+.vre-wizard .wizard-step .wizard-form textarea,
+.vre-wizard .wizard-step .wizard-form select {
+	flex: 1;
+	margin: 0;
+	max-width: 100%;
+}
+
+/* media print */
+@media print {
+	body {
+		background-color: #fff !important;
+	}
+	#adminmenumain, #wpadminbar, #wpfooter {
+		display: none !important;
+	}
+	#wpcontent {
+		margin-left: 0 !important;
+	}
+	html.wp-toolbar {
+		padding: 0px !important;
+	}
+}
+
+/* Responsive */
+@media screen and (max-width: 1620px) {
+	#vre-main-menu.vre-horizontal-menu .parent {
+		width: 180px;
+	}
+}
+@media screen and (max-width: 1479px) {
+	#vre-main-menu.vre-horizontal-menu .parent {
+		width: 170px;
+	}
+}
+@media screen and (max-width: 1440px) {
+	#vre-main-menu.vre-horizontal-menu .parent {
+		width: auto;
+	}
+	#vre-main-menu.vre-horizontal-menu .title > a {
+		padding: 14px 15px;
+	}
+	#vre-main-menu.vre-horizontal-menu .parent .title > a i:first-child {
+		font-size: 20px;
+		width: 18px;
+	}
+	#vre-main-menu.vre-horizontal-menu .parent .title > a > span {
+		width: auto;
+	}
+	#vre-main-menu.vre-horizontal-menu .parent .title:not(.selected) > a > span {
+		display: none;
+	}
+	#vre-main-menu.vre-horizontal-menu .license-box {
+		padding: 15.5px 15px;
+	}
+}
+@media screen and (max-width: 740px) {
+	#vre-main-menu.vre-horizontal-menu .license-box span {
+		display: none;
+	}
+}
+@media screen and (max-width: 640px) {
+	#vre-main-menu.vre-horizontal-menu .parent .title > a > span {
+		display: none;
+	}
+}
+
+/* disable style of input inside a select2 with multi-selection */
+.wp-block-legacy-widget__edit-form .widget-inside.widget-inside .select2-container-multi input {
+	border: 0px !important;
+	padding: 0px !important;
+	margin: 0px 0px 0px 5px !important;
+	box-shadow: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+}
+
+.vre-list-pagination {
+	align-items: center !important;
+	min-height: 50px;
+}
+
+.wp-admin div[class*="span"].full-width .input-append,
+.wp-admin div[class*="span"].full-width .input-prepend,
+.wp-admin div[class*="span"].full-width .btn-group {
+    display: inline-block !important;
+    width: auto !important;
+}
+
+.wp-admin div[class*="span"].full-width input:not([type="checkbox"]):not([type="radio"]), 
+.wp-admin div[class*="span"].full-width .control-group textarea,
+.wp-admin div[class*="span"].full-width .control-group textarea {
+    width: 100% !important;
+}
+.wp-admin div[class*="span"].full-width .iti {
+	width: calc(100% - 14px) !important;
+}
+
+.wp-admin .vr-customer-image {
+	box-sizing: border-box !important;
+}
+
+/* multi-field */
+
+.control-group.multi-field .controls,
+.control-group .controls .multi-field {
+	display: flex;
+	align-items: center;
+}
+.control-group.multi-field .controls > *,
+.control-group .controls .multi-field > * {
+	flex: 1;
+}
+.control-group.multi-field .controls > button,
+.control-group .controls .multi-field > button,
+.control-group.multi-field .controls > i, 
+.control-group .controls .multi-field > i,
+.control-group.multi-field .controls > a,
+.control-group .controls .multi-field > a {
+	flex: 0;
+}
+.control-group.multi-field.extend-buttons-25 .controls > button,
+.control-group .controls .multi-field.extend-buttons-25 > button {
+	flex: 0 0 25%;
+}
+.control-group.multi-field .controls > *:not(:first-child),
+.control-group .controls .multi-field > *:not(:first-child) {
+	margin-left: 8px;
+}
+.control-group.multi-field.no-margin-last-2 .controls > *:nth-last-child(2),
+.control-group .controls .multi-field.no-margin-last-2 > *:nth-last-child(2),
+.control-group.multi-field.no-margin-last-3 .controls > *:nth-last-child(3),
+.control-group .controls .multi-field.no-margin-last-3 > *:nth-last-child(3) {
+	margin-right: 0;
+}
+.control-group.multi-field.with-icon .controls i {
+	width: 24px;
+}
+
+#sms-estimate-btn {
+	margin-left: 40px !important;
+}
+
+/* inspector  */
+
+.wp-admin .record-inspector-overlay {
+	z-index: 99999;
+}
+.wp-admin .record-inspector {
+	padding: 0;
+}
+.wp-admin .record-inspector .inspector-body {
+	height: calc(100% - 150px);
+}
+.wp-admin .record-inspector .inspector-footer {
+	bottom: 0;
+}
+
+.wp-admin .record-inspector .inspector-body joomla-tab > joomla-tab-element {
+	padding: 10px 0 0 0;
+}
+.wp-admin .record-inspector .inspector-body .inspector-form input,
+.wp-admin .record-inspector .inspector-body .inspector-form select,
+.wp-admin .record-inspector .inspector-body .inspector-form textarea,
+.wp-admin .record-inspector .inspector-body .inspector-form .select2-container {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0;
+}
+.wp-admin .record-inspector .inspector-body .inspector-form .control-group { 
+	margin: 0 0 8px 0;
+	display: block;
+}
+.wp-admin .record-inspector .inspector-body .inspector-form .controls {
+	min-width: 0;
+}
+.wp-admin .record-inspector .inspector-body .inspector-form .input-append,
+.wp-admin .record-inspector .inspector-body .inspector-form .input-prepend {
+	margin-bottom: 5px;
+}
+
+.pac-container {
+	z-index: 99999;
+}
+
+.wp-admin .record-inspector .inspector-body .inspector-form .toppings-group .topping-quantity > a {
+	line-height: 16px;
+}
+.wp-admin .record-inspector .inspector-body .inspector-form .topping-rate {
+	flex: 1;
+}
+
+.wp-admin .inspector-form .btn-toolbar .btn-group {
+	display: flex !important;
+	width: auto !important;
+}
+
+/* spinner  */
+.vr-loading-tmpl .spinner {
+	visibility: visible !important;
+	opacity: 1 !important;
+	background-image: none !important;
+}
+
+/* print */
+
+@media print {
+	body {
+		height: auto !important;
+	}
+}
+
+/* align controls designed for a vertical layout */
+
+.control-group.vr-uploadimage-child .controls,
+.control-group.vr-fonticon-child .controls,
+#vre_formfield_content_circle_center_longitude_-control {
+	display: inline-block;
+	width: calc(100% - 160px) !important;
+	margin-left: 154px !important;
+}
+
+.multi-field > div > input {
+	width: 100%;
+}
+
+/* toast conflict */
+
+.vre-toast-wrapper.error {
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* Fixed wp editor problem with the buttons size */
+
+.wp-admin .record-inspector .inspector-body .inspector-form .wp-editor-container .ed_button.button,
+.wp-admin div[class*="span"] .wp-editor-wrap .wp-editor-container .ed_button.button {
+    width: auto !important;
+}
+
+/* rss  */
+
+.display-flex {
+	display: flex;
+}

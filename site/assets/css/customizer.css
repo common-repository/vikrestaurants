@@ -1,0 +1,53 @@
+.customizer-inspected-element:hover,
+.customizer-inspected-element.customizer-shared-element,
+.customizer-inspected-element.customizer-force-inspection {
+	background-color: #A8C5E599 !important;
+	position: relative;
+}
+
+.customizer-inspected-element:hover::before,
+.customizer-inspected-element.customizer-force-inspection::before {
+	content: attr(data-customizer-selector);
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 13px;
+    background: #000c;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 999999;
+}
+
+.customizer-tooltip-stick-top.customizer-inspected-element:hover::before,
+.customizer-tooltip-stick-top.customizer-inspected-element.customizer-force-inspection::before {
+    top: 4px;
+    transform: translate(-50%, 0);
+}
+
+td[class^="custom-position-"] {
+    position: relative;
+}
+
+.customizer-conditional-text-add {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    background-image: url(./images/plus.png);
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+}
+.customizer-conditional-text-add:hover {
+    opacity: 1;
+}
+.customizer-conditional-text-add.enabled {
+    display: block;
+}

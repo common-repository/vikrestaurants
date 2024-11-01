@@ -1,0 +1,387 @@
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="number"], textarea {
+	-webkit-appearance: none;
+}
+input, select, button, textarea {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 5px;
+	margin: 0;
+}
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+input[type^="submit"]{
+	cursor: pointer;
+}
+.vre-select {
+	display: inline-block;
+	max-width: 100%;
+	height: 40px;
+	padding: 5px 30px 5px 7px;
+	line-height: 1.5;
+	vertical-align: middle;
+	background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center;
+    background-size: auto;
+	background-size: 8px 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	min-width: unset;
+	margin-bottom: 0;
+}
+.vre-select-small {
+	min-width: 174px;
+}
+.vre-select-mid {
+    min-width: 290px;
+}
+.vre-select-smallh {
+	height: 28px;
+	line-height: 14px;
+}
+.vre-select-fullwidth {
+	min-width: inherit;
+	width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+	input[type=radio] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+		margin: 0;
+		-webkit-transition-property: border,-webkit-box-shadow;
+		transition-property: border,-webkit-box-shadow;
+		transition-property: border,box-shadow;
+		transition-property: border,box-shadow,-webkit-box-shadow;
+		-webkit-transition-duration: .15s;
+		transition-duration: .15s;
+		-webkit-transition-timing-function: ease-out;
+		transition-timing-function: ease-out;
+		position: relative;
+		width: 20px;
+		height: 20px;
+		border: 2px solid #bac3c3;
+		border-radius: 50%;
+		background-color: #fff;
+		cursor: pointer;
+	}
+	input[type=radio]:checked, input[type=radio]:hover {
+    	border-color: #0f99db;
+	}
+	input[type=radio]:after {
+	    content: "";
+	    position: absolute;
+	    top: 3px;
+	    left: 3px;
+	    width: 10px;
+	    height: 10px;
+	    border-radius: 50%;
+	}
+	input[type=radio]:checked:after {
+    	background-color: #0f99db;
+	}
+	input[type=radio] + label {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: -3px;
+		margin-left: 5px;
+	}
+	input[type=checkbox] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		margin: 0 8px 0 0;
+		/*-webkit-box-shadow: inset 0 0 0 2px #bac3c3;*/
+		-webkit-box-shadow: inset 0 0 0 2px #bac3c3;
+		/*box-shadow: inset 0 0 0 2px #bac3c3;*/
+		box-shadow: inset 0 0 0 2px #bac3c3;
+		outline: 0;
+		background: #fff;
+		cursor: pointer;
+		position: relative;
+		/*border: 3px solid transparent;*/
+		/*border-radius: 5px;*/
+		border-radius: 2px;
+		border: 0;
+		/*width: 24px;*/
+		width: 20px;
+		/*height: 24px;*/
+		height: 20px;
+	}
+	input[type=checkbox]:after {
+		margin: 2px 0 0 7px;
+		width: 3px;
+		height: 10px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		background: transparent;
+		border-bottom: 3px solid #fff;
+		border-right: 3px solid #fff;
+	}
+	input[type=checkbox]:after {
+		top: 0;
+		left: 0;
+		content: "";
+		opacity: 0;
+		position: absolute;
+		box-sizing: content-box;
+	}
+	input[type=checkbox]:after {
+		opacity: 1;
+	}
+	input[type=checkbox]:checked {
+	    background: #0f99db;
+	    /*border-color: #fff;*/
+	    border-color: #0f99db;
+	    /*-webkit-box-shadow: inset 0 0 0 2px #0f99db;*/
+	    -webkit-box-shadow: inset 0 0 0 2px #0f99db;
+		/*box-shadow: inset 0 0 0 2px #0f99db;*/
+		box-shadow: inset 0 0 0 2px #0f99db;
+	}
+	input[type=checkbox] + label {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 0px;
+		margin-left: 5px;
+		line-height: 20px;
+	}
+}
+
+/* Multiple select */
+
+.select2-container-multi .select2-choices {
+	background-image: none !important;
+	border: 1px solid #ccc !important;
+}
+.select2-container-multi .select2-choices .select2-input {
+	box-shadow: none !important;
+	background: none !important;
+	border: 0 !important;
+}
+.select2-container-multi .select2-choices .select2-search-field {
+	border-bottom: 0 !important;
+}
+.select2-container-multi .select2-choices .select2-search-choice {
+	background-color: #006699 !important;
+	border-color: #006699 !important;
+	background-image: none !important;
+	color: #fff !important;
+	padding: 8px 20px 8px 8px !important;
+	box-shadow: none !important;
+}
+.select2-container-multi .select2-search-choice-close {
+	position: absolute;
+	top: 7px;
+	right: 3px !important;
+	left: auto !important;
+	color: #fff;
+	background-image: none !important;
+	text-decoration: none !important;
+}
+.select2-container-multi .select2-search-choice-close:before {
+	content: "×";
+	display: block;
+	font-size: 15px;
+}
+.select2-container-multi .select2-search-choice-close:hover, .select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
+	background-position: right top !important;
+}
+.select2-drop.select2-drop-above.select2-drop-active {
+	border-bottom: 1px solid #ccc !important;
+}
+
+/* Buttons */
+
+a.vre-btn,
+button.vre-btn,
+a.vre-btn:hover,
+button.vre-btn:hover {
+	text-decoration: none !important;
+}
+
+a.vre-btn,
+button.vre-btn {
+	padding: var(--vre-button-default-padding-vertical) var(--vre-button-default-padding-horizontal);
+	font-size: var(--vre-button-default-font-size);
+	border-radius: var(--vre-button-default-border-radius);
+	border-width: var(--vre-button-default-border-width);
+	border-style: solid;
+	cursor: pointer;
+	display: inline-block;
+	background-color: var(--vre-button-default-background) !important;
+	color: var(--vre-button-default-color) !important;
+	text-align: center;
+	box-sizing: border-box;
+}
+a.vre-btn.large,
+button.vre-btn.large {
+	padding: var(--vre-button-default-padding-vertical) calc( var(--vre-button-default-padding-horizontal) * 1.8 );
+}
+a.vre-btn.big,
+button.vre-btn.big {
+	padding: calc( var(--vre-button-default-padding-vertical) * 1.3 ) calc( var(--vre-button-default-padding-horizontal) * 1.3 );
+	font-size: calc( var(--vre-button-default-font-size) * 1.15 );
+}
+a.vre-btn.small,
+button.vre-btn.small {
+	padding: calc( var(--vre-button-default-padding-vertical) * 0.7 ) calc( var(--vre-button-default-padding-horizontal) * 0.7 );
+	font-size: calc( var(--vre-button-default-font-size) * 0.95 );
+}
+a.vre-btn:hover,
+button.vre-btn:hover {
+	background-color: var(--vre-button-default-hover-background) !important;
+	color: var(--vre-button-default-hover-color) !important;
+}
+a.vre-btn.disabled:hover,
+button.vre-btn[disabled]:hover {
+	background-color: var(--vre-button-default-background) !important;
+	color: var(--vre-button-default-color) !important;
+}
+a.vre-btn:active, a.vre-btn.active,
+button.vre-btn:active, button.vre-btn.active {
+	background-color: var(--vre-button-default-active-background) !important;
+	color: var(--vre-button-default-active-color) !important;
+}
+a.vre-btn i, button.vre-btn i {
+	color: var(--vre-button-default-color) !important;
+}
+a.vre-btn svg path, button.vre-btn svg path {
+	fill: var(--vre-button-default-color) !important;
+}
+
+a.vre-btn.primary,
+button.vre-btn.primary {
+	border-color: var(--vre-button-primary-border-color);
+	background-color: var(--vre-button-primary-background) !important;
+	color: var(--vre-button-primary-color) !important;
+}
+a.vre-btn.primary:hover,
+button.vre-btn.primary:hover {
+	background-color: var(--vre-button-primary-hover-background) !important;
+	color: var(--vre-button-primary-hover-color) !important;
+	border-color: var(--vre-button-primary-hover-border-color);
+}
+a.vre-btn.primary.disabled:hover,
+button.vre-btn.primary[disabled]:hover {
+	background-color: var(--vre-button-primary-background) !important;
+	color: var(--vre-button-primary-color) !important;
+	border-color: var(--vre-button-primary-border-color);
+}
+a.vre-btn.primary:active, a.vre-btn.primary.active,
+button.vre-btn.primary:active, button.vre-btn.primary.active {
+	background-color: var(--vre-button-primary-active-background) !important;
+	color: var(--vre-button-primary-active-color) !important;
+	border-color: var(--vre-button-primary-active-border-color);
+}
+a.vre-btn.primary i, button.vre-btn.primary i {
+	color: var(--vre-button-primary-color) !important;
+}
+a.vre-btn.primary svg path, button.vre-btn.primary svg path {
+	fill: var(--vre-button-primary-color) !important;
+}
+
+a.vre-btn.secondary,
+button.vre-btn.secondary {
+	border-color: var(--vre-button-secondary-border-color);
+	background-color: var(--vre-button-secondary-background) !important;
+	color: var(--vre-button-secondary-color) !important;
+}
+a.vre-btn.secondary:hover,
+button.vre-btn.secondary:hover {
+	background-color: var(--vre-button-secondary-hover-background) !important;
+	color: var(--vre-button-secondary-hover-color) !important;
+	border-color: var(--vre-button-secondary-hover-border-color);
+}
+a.vre-btn.secondary.disabled:hover,
+button.vre-btn.secondary[disabled]:hover {
+	background-color: var(--vre-button-secondary-background) !important;
+	color: var(--vre-button-secondary-color) !important;
+	border-color: var(--vre-button-secondary-border-color);
+}
+a.vre-btn.secondary:active, a.vre-btn.secondary.active,
+button.vre-btn.secondary:active, button.vre-btn.secondary.active {
+	background-color: var(--vre-button-secondary-active-background) !important;
+	color: var(--vre-button-secondary-active-color) !important;
+	border-color: var(--vre-button-secondary-active-border-color);
+}
+a.vre-btn.secondary i, button.vre-btn.secondary i {
+	color: var(--vre-button-secondary-color) !important;
+}
+a.vre-btn.secondary svg path, button.vre-btn.secondary svg path {
+	fill: var(--vre-button-secondary-color) !important;
+}
+
+a.vre-btn.success,
+button.vre-btn.success {
+	border-color: var(--vre-button-success-border-color);
+	background-color: var(--vre-button-success-background) !important;
+	color: var(--vre-button-success-color) !important;
+}
+a.vre-btn.success:hover,
+button.vre-btn.success:hover {
+	background-color: var(--vre-button-success-hover-background) !important;
+	color: var(--vre-button-success-hover-color) !important;
+	border-color: var(--vre-button-success-hover-border-color);
+}
+a.vre-btn.success.disabled:hover,
+button.vre-btn.success[disabled]:hover {
+	background-color: var(--vre-button-success-background) !important;
+	color: var(--vre-button-success-color) !important;
+	border-color: var(--vre-button-success-border-color);
+}
+a.vre-btn.success:active, a.vre-btn.success.active,
+button.vre-btn.success:active, button.vre-btn.success.active {
+	background-color: var(--vre-button-success-active-background) !important;
+	color: var(--vre-button-success-active-color) !important;
+	border-color: var(--vre-button-success-active-border-color);
+}
+a.vre-btn.success i, button.vre-btn.success i {
+	color: var(--vre-button-success-color) !important;
+}
+a.vre-btn.success svg path, button.vre-btn.success svg path {
+	fill: var(--vre-button-success-color) !important;
+}
+
+a.vre-btn.danger,
+button.vre-btn.danger {
+	border-color: var(--vre-button-danger-border-color);
+	background-color: var(--vre-button-danger-background) !important;
+	color: var(--vre-button-danger-color) !important;
+}
+a.vre-btn.danger:hover,
+button.vre-btn.danger:hover {
+	background-color: var(--vre-button-danger-hover-background) !important;
+	color: var(--vre-button-danger-hover-color) !important;
+	border-color: var(--vre-button-danger-hover-border-color);
+}
+a.vre-btn.danger.disabled:hover,
+button.vre-btn.danger[disabled]:hover {
+	background-color: var(--vre-button-danger-background) !important;
+	color: var(--vre-button-danger-color) !important;
+	border-color: var(--vre-button-danger-border-color);
+}
+a.vre-btn.danger:active, a.vre-btn.danger.active,
+button.vre-btn.danger:active, button.vre-btn.danger.active {
+	background-color: var(--vre-button-danger-active-background) !important;
+	color: var(--vre-button-danger-active-color) !important;
+	border-color: var(--vre-button-danger-active-border-color);
+}
+a.vre-btn.danger i, button.vre-btn.danger i {
+	color: var(--vre-button-danger-color) !important;
+}
+a.vre-btn.danger svg path, button.vre-btn.danger svg path {
+	fill: var(--vre-button-danger-color) !important;
+}
+
+a.vre-btn.disabled,
+button.vre-btn[disabled] {
+    cursor: default;
+    opacity: 0.7;
+}

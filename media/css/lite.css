@@ -1,0 +1,57 @@
+/* hide edit button from kitchen widget */
+.vr-kitchen-wall .kitchen-wall-block .wall-block-head .block-head-actions {
+	display: none;
+}
+
+/* edit footer from reservation modal */
+#jmodal-respinfo .modal-footer {
+	display: none;
+}
+#jmodal-respinfo .modal-header + div.has-footer {
+	height: calc(100% - 70px) !important;
+}
+
+/* hide add/edit button next to user dropdown */
+input[name="id_user"] + a#addcustomer {
+	display: none;
+}
+
+/* LITE version - Pages not available */
+
+.vre-free-nonavail-wrap {
+	text-align: center;
+	margin-top: 20px;
+}
+.vre-free-nonavail-logo img {
+	max-width: 400px;
+}
+.vre-free-nonavail-expl {
+	color: #444;
+}
+.vre-free-nonavail-expl h3 {
+	font-size: 24px;
+	margin-bottom: 0;
+	color: #444;
+}
+.vre-free-nonavail-expl .vre-free-nonavail-descr {
+	font-size: 16px;
+	max-width: 500px;
+	margin: 14px auto;
+}
+.vre-free-nonavail-footer-descr .vre-free-nonavail-gopro {
+	background: #299223;
+	color: #fff;
+	border: 1px solid #299223;
+	border-radius: 20px;
+	font-weight: bold;
+	padding: 10px;
+}
+.vre-free-nonavail-footer-descr .vre-free-nonavail-gopro:hover {
+	background: #48a843;
+}
+.vre-free-nonavail-footer-descr .vre-free-nonavail-gopro:active {
+	background: #65c660;
+}
+.vre-free-nonavail-footer-descr .vre-free-nonavail-gopro i {
+	margin-right: 5px;
+}

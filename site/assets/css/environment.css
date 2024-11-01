@@ -1,0 +1,69 @@
+:root {
+
+	/* default button  */
+
+	--vre-button-default-font-size: 16px;
+
+	--vre-button-default-padding-vertical: 10px;
+	--vre-button-default-padding-horizontal: 18px;
+
+	--vre-button-default-border-width: 0px;
+	--vre-button-default-border-radius: 4px;
+
+	/* primary button */
+	
+	--vre-button-primary-background: #993300;
+	--vre-button-primary-color: #FFFFFF;
+	--vre-button-primary-border-color: #993300;
+
+	--vre-button-primary-hover-background: #B33A00;
+	--vre-button-primary-hover-color: #FFFFFF;
+	--vre-button-primary-hover-border-color: #B33A00;
+
+	--vre-button-primary-active-background: #873A13;
+	--vre-button-primary-active-color: #FFFFFF;
+	--vre-button-primary-active-border-color: #873A13;
+
+	/* secondary button */
+	
+	--vre-button-secondary-background: #F2F2F2;
+	--vre-button-secondary-color: #444444;
+	--vre-button-secondary-border-color: #DDDDDD;
+
+	--vre-button-secondary-hover-background: #DDDDDD;
+	--vre-button-secondary-hover-color: #444444;
+	--vre-button-secondary-hover-border-color: #DDDDDD;
+
+	--vre-button-secondary-active-background: #CCCCCC;
+	--vre-button-secondary-active-color: #444444;
+	--vre-button-secondary-active-border-color: #CCCCCC;
+
+	/* success button */
+
+	--vre-button-success-background: #159049;
+	--vre-button-success-color: #FFFFFF;
+	--vre-button-success-border-color: #159049;
+
+	--vre-button-success-hover-background: #17A152;
+	--vre-button-success-hover-color: #FFFFFF;
+	--vre-button-success-hover-border-color: #17A152;
+
+	--vre-button-success-active-background: #148E48;
+	--vre-button-success-active-color: #FFFFFF;
+	--vre-button-success-active-border-color: #148E48;
+
+	/* danger button */
+
+	--vre-button-danger-background: #BC3F3A;
+	--vre-button-danger-color: #FFFFFF;
+	--vre-button-danger-border-color: #BC3F3A;
+
+	--vre-button-danger-hover-background: #E4423E;
+	--vre-button-danger-hover-color: #FFFFFF;
+	--vre-button-danger-hover-border-color: #E4423E;
+
+	--vre-button-danger-active-background: #AE3A36;
+	--vre-button-danger-active-color: #FFFFFF;
+	--vre-button-danger-active-border-color: #AE3A36;
+
+}

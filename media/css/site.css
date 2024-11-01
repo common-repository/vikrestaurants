@@ -1,0 +1,53 @@
+.select2-choice {
+	text-decoration: none !important;
+	font-size: 14px;
+}
+.select2-results {
+	margin-bottom: 9px;
+}
+.select2-drop-active {
+	font-size: 14px;
+}
+#primary .entry-content,
+#site-content .entry-content {
+	float: none !important;
+	width: 100% !important;
+}
+#primary .entry-content > .wrap,
+#site-content .entry-content > .wrap {
+	width: 90% !important;
+	max-width: 90% !important;
+}
+
+input[type="checkbox"] {
+	padding: 0;
+}
+
+.wrap a,
+.wrap button[disabled]:hover {
+	text-decoration: none;
+}
+
+.wrap img {
+	display: initial;
+}
+
+.vrtk-additem-variations-box label,
+.vrtk-additem-topping-field label {
+	display: inline-block;
+}
+
+.vr-modal-box {
+	/*height: calc(100vh - 50px);*/
+	/*margin-top: 40px;*/
+}
+.vr-modal-box .vr-modal-head h3 {
+	margin: 0;
+}
+#vrdishoverlay .vr-modal-body,
+#vrpaymentoverlay .vr-modal-body {
+	height: calc(100% - 150px);
+}
+#vrnewitemoverlay .vr-modal-body {
+	/*height: calc(100% - 55px);*/
+}
